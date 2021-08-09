@@ -1,0 +1,688 @@
+/* #757575 основний колір тексту */
+/* #212121 колір заголовків */
+/* #FFFFFF колір тексту героя*/
+/* #2196F3 колір акценту */
+/* rgba(255, 255, 255, 0.6); колір в подвалі контактних даних */
+/* rgba(255, 255, 255, 0.1) колір фону на ссилке футера */
+/* rgba(255, 255, 255, 0.6) колір ссилок футера */
+/* #FFFFFF основний колір фону */
+/* #F5F4FA вторинний колір фону сторінки */
+/* #2F303A колір підвалу фону */
+/* #C4C4C4 колір підложки героя */
+/* #EEEEEE колір лінії карток порттфоліо */
+/* #ECECEC колір лінії хедера */
+/* #AFB1B8 колір иконки ссилок у спецов */
+/* 0px 4px 4px rgba(0, 0, 0, 0.15) тени на кнопку хедера */
+/* Roboto 400/500/700/900 основний шоифт */
+/* Raleway  700 додатковий шрифт*/
+/* cubic-bezier(0.4, 0, 0.2, 1) кубик анимации */
+:root {
+  --primary-text-color: #757575;
+  --primary-bgc: #ffffff;
+  --secondary-bgc: #f5f4fa;
+  --title-color: #212121;
+  --acent-color: #2196f3;
+  --title-white: #ffffff;
+  --button-bgc: #f5f4fa;
+  --footer-bgc: #2f303a;
+  --heroes-bgc: #c4c4c4;
+  --footer-thumb-bgc: rgba(255, 255, 255, 0.1);
+  --portfolio-card-bgc: #eeeeee;
+  --icon-social-color: #afb1b8;
+  --header-line-color: #ececec;
+  --futter-link-color: rgba(255, 255, 255, 0.6);
+  --button-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --animation: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bgc);
+  font-family: "Roboto", "Arial", sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+/* hide element*/
+.hidden {
+  visibility: hidden;
+  font-size: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* упаковка контейнер */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* загальне вимога по ТЗ */
+.section {
+  padding: 94px 0;
+}
+/* прибрати маркера списків сторінки */
+.list {
+  list-style: none;
+}
+/* розмітка HEADER */
+.line {
+  border: 1px solid var(--header-line-color);
+}
+.header-top {
+  display: flex;
+  align-items: center;
+}
+/* оформлення логотипа */
+.logo {
+  /* оформлення тексту */
+  color: var(--title-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  text-decoration: none;
+}
+.logo .logo-blue {
+  color: var(--acent-color);
+}
+/* оформлення навігації */
+.site-nav .site-info {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link {
+  color: var(--title-color);
+  text-decoration: none;
+
+  padding: 32px 0;
+  display: block;
+
+  transition: color 250ms var(--animation);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--acent-color);
+}
+/* позиционирование nav */
+.site-nav {
+  display: flex;
+  flex-direction: row;
+}
+.site-nav .site-nav-link {
+  position: relative;
+  margin-left: 50px;
+}
+.site-nav .site-nav-link:first-child {
+  margin-left: 93px;
+}
+
+/* оформлення контактів */
+.site-info .site-info-header {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: color 250ms var(--animation);
+}
+.site-info :hover,
+.site-info :focus {
+  color: var(--acent-color);
+}
+/* текущая страница */
+.site-nav-link.page > a {
+  color: var(--acent-color);
+}
+.site-nav-link.page ::after {
+  content: "";
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--acent-color);
+}
+/* позиционирование контакти  */
+.site-info.list {
+  display: flex;
+  margin-left: auto;
+}
+.site-info.list .site-info-contact {
+  margin-left: 50px;
+}
+.site-info.list .site-info-contact:first-child {
+  margin-left: 0px;
+}
+.site-info-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
+.site-info :hover .site-info-icon,
+.site-info :focus .site-info-icon {
+  fill: currentColor;
+}
+/* оформлення main */
+.section.without-padding {
+  padding-top: 0px;
+}
+/* оформлення героя */
+.heroes {
+  background-color: var(--heroes-bgc);
+  text-align: center;
+  padding: 200px 0;
+  margin: 0 auto;
+  max-width: 1600px;
+  min-height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.heroes-title {
+  color: var(--title-white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+.heroes .heroes-button {
+  color: var(--title-white);
+  background-color: var(--acent-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+
+  box-shadow: var(--button-shadow-color);
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  border: 1px solid transparent;
+
+  transition: color 250ms var(--animation),
+    background-color 250ms var(--animation);
+}
+.heroes .heroes-button:focus,
+.heroes .heroes-button:hover {
+  color: var(--acent-color);
+  background-color: var(--primary-bgc);
+}
+/* оформлення основи */
+.section-title {
+  padding-top: 30px;
+  color: var(--title-color);
+}
+/* позиціонування блоків сайту  */
+/* Особенности */
+.text-set-card .text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.text-set {
+  display: flex;
+}
+.list .section-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+.text-set .text-set-card {
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 3 - 90px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.text-set .text-set-card:first-child {
+  margin-left: 0;
+}
+
+.icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 270px;
+  background-color: var(--button-bgc);
+  border-radius: 4px;
+}
+.text-set-icon {
+  display: flex;
+}
+
+/* Чем ми занимаемся оверлей  1*/
+
+.pic-list-icon {
+  position: relative;
+}
+.pic-list-text {
+  color: var(--title-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  padding: 27px 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* Чем ми занимаемся позиционирование */
+
+.pic-list.list {
+  display: flex;
+  flex-basis: calc(100% / 3);
+  justify-content: space-between;
+}
+/* Наша команда позиционирование */
+.section.background-color {
+  padding-top: 0;
+  background-color: var(--secondary-bgc);
+}
+.have-padding {
+  padding-top: 94px;
+}
+.team.list {
+  display: flex;
+}
+.team.list .team-specialist {
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 3 - 90px);
+  background-color: var(--primary-bgc);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+}
+.team.list .team-specialist:first-child {
+  margin-left: 0;
+}
+
+/* Наша команда оформление */
+
+.subtitle {
+  color: var(--title-color);
+  line-height: 1.16;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  /*відступ заголовка */
+  margin-bottom: 50px;
+}
+.card-specialist.link {
+  text-decoration: none;
+}
+.card-specialist .headline {
+  color: var(--title-color);
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+.team .text {
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.18;
+
+  padding-top: 10px;
+}
+.card-text-specialist {
+  padding-top: 30px 16px 0 0;
+}
+/* социоальние иконки спецов */
+.specialist-icon {
+  fill: currentColor;
+
+  transition: fill 250ms var(--animation);
+}
+.social-specialist-item {
+  color: var(--icon-social-color);
+  margin-right: 10px;
+}
+.social-specialist-item:last-child {
+  margin-right: 0px;
+}
+.social-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icon-social-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--title-wite);
+
+  transition: background-color 250ms var(--animation);
+}
+.social-thumb:hover,
+.social-thumb:focus {
+  background-color: var(--acent-color);
+}
+.social-thumb:hover .specialist-icon {
+  fill: var(--title-white);
+}
+
+.social-specialist {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.social-specialist-item {
+  display: flex;
+}
+/* client section */
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-thumb {
+  display: flex;
+}
+.client-link {
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 1px solid var(--icon-social-color);
+  color: var(--icon-social-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: color 250ms var(--animation), border 250ms var(--animation);
+}
+.client-icon {
+  fill: currentColor;
+}
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--acent-color);
+}
+.client-link:hover .client-icon {
+  fill: var(--acent-color);
+}
+/* позиционирование футер */
+.footer-padding {
+  padding: 60px 15px;
+  display: flex;
+  align-items: center;
+}
+/* оформлення футер */
+.below {
+  background-color: var(--footer-bgc);
+}
+.below-logo,
+.location {
+  color: var(--title-white);
+}
+.below-logo .logo-blue {
+  color: var(--acent-color);
+}
+.below-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.location {
+  color: var(--title-white);
+  line-height: 1.7;
+  font-style: normal;
+  text-decoration: none;
+
+  transition: color 250ms var(--animation);
+}
+.below-link .link {
+  color: var(--futter-link-color);
+  text-decoration: none;
+  line-height: 1.7;
+  font-style: normal;
+
+  margin-top: 9px;
+  display: inline-block;
+
+  transition: color 250ms var(--animation);
+}
+.below-link :hover,
+.below-link :focus {
+  color: var(--acent-color);
+}
+
+.social-list {
+  display: flex;
+}
+/* приеднуйтесь */
+.footer-social {
+  margin-left: 70px;
+}
+.add {
+  color: var(--title-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.87;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.social-page {
+  display: flex;
+}
+.footer-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--title-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms var(--animation);
+}
+.footer-icon {
+  fill: currentColor;
+
+  transition: fill 250ms var(--animation);
+}
+.footer-thumb:hover,
+.footer-thumb:focus {
+  background-color: var(--acent-color);
+}
+/*сторінка 2 портфоліо */
+/* фильтр  позиционирование*/
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filter .filter-element {
+  margin-left: 8px;
+}
+.filter .filter-element:first-child {
+  margin-left: 0;
+}
+/* фильтр оформление */
+.filter .filter-button {
+  color: var(--title-color);
+  background-color: var(--button-bgc);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 0px solid transparent;
+
+  transition: background-color 250ms var(--animation),
+    color 250ms var(--animation);
+}
+.filter .filter-button:hover,
+.filter .filter-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--title-white);
+  background-color: var(--acent-color);
+}
+
+/* оформлення  */
+/* оверлей на карточки */
+.images-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-text-thumb {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation);
+}
+
+.portfolio-card:hover .overlay-text-thumb,
+.portfolio-card:hover .overlay-text {
+  transform: translateY(0);
+}
+.overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--title-white);
+  padding: 63px 24px;
+}
+
+/* картки оформлення */
+.item .portfolio-card:hover,
+.item .portfolio-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio .link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.item .portfolio-title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.item .portfolio-text {
+  font-size: 16px;
+  line-height: 1.8;
+
+  margin-top: 8px;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.portfolio .item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 -60x);
+}
+.item .text-thumb {
+  padding: 20px 24px;
+  border: 1px solid var(--portfolio-card-bgc);
+  border-top: none;
+}
+/* модальне вікно */
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms var(--animation);
+}
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--primary-bgc);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--animation);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 8px 8px;
+  cursor: pointer;
+
+  background-color: var(--primary-bgc);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
