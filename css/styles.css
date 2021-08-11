@@ -546,6 +546,7 @@ img {
 }
 .subscrabe-text {
   color: var(--title-white);
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -770,20 +771,26 @@ img {
 
   margin-bottom: 12px;
 }
+.form-input:focus .form-icon {
+  color: #2196f3;
+}
+.form-input:focus .form-input {
+  border: 1px solid rgb(255, 0, 0);
+}
 .form-field {
   display: flex;
   flex-direction: column;
-  margin: 30px 0 30px 0;
+  margin: 10px 0 10px 0;
+  margin-bottom: 4px;
 
   position: relative;
 }
-.form-label {
+.form-field-text {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
 }
-
 .form-text {
   resize: none;
   padding: 12px 16px;
@@ -795,35 +802,36 @@ img {
 }
 .form-input {
   padding: 11px 0 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 .sheck_box_label {
+  position: relative;
   font-size: 14px;
   line-height: 1.71;
   margin: 20px 0 30px 0;
+  padding-left: 45px;
 
-  text-align: end;
   cursor: pointer;
 }
-.sheck_box_icon {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-90%);
-}
-/* .checkbox {
+.form-field .check_input {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-} */
-.checkbox:checked + .sheck_box_color {
-  opacity: 1;
 }
-
-.sheck_box_color {
-  background-color: var(--acent-color);
-  border-radius: 2px;
-  opacity: 0;
+.check_box {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 16px;
+  height: 15px;
+  margin-left: -23px;
+  background-image: url(/images/svg/icon_dont_check.svg);
+}
+/* вибране */
+.check_input:checked + .check_box {
+  background-image: url(/images/svg/icon_check.svg);
 }
 .button-form {
   background-color: var(--acent-color);
