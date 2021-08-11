@@ -406,48 +406,41 @@
                 <svg class="client-icon" width="106" height="60">
                   <use
                     xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo"
-                  ></use></svg
-              ></a>
+                  ></use></svg></a>
             </li>
             <li class="client-thumb">
               <a class="client-link" href="#">
                 <svg class="client-icon" width="106" height="60">
                   <use
                     xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo-1"
-                  ></use></svg
-              ></a>
+                  ></use></svg></a>
             </li>
             <li class="client-thumb">
               <a class="client-link" href="#">
                 <svg class="client-icon" width="106" height="60">
                   <use
                     xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo-2"
-                  ></use></svg
-              ></a>
+                  ></use></svg></a>
             </li>
             <li class="client-thumb">
               <a class="client-link" href="#">
                 <svg class="client-icon" width="106" height="60">
                   <use
-                    xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo-3"
-                  ></use></svg
-              ></a>
+                    xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo-3"></use></svg></a>
             </li>
             <li class="client-thumb">
               <a class="client-link" href="#">
                 <svg class="client-icon" width="106" height="60">
                   <use
                     xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo-4"
-                  ></use></svg
-              ></a>
+                  ></use></svg></a>
             </li>
             <li class="client-thumb">
               <a class="client-link" href="#">
                 <svg class="client-icon" width="106" height="60">
                   <use
                     xlink:href="./images/svg/symbol-defs-good.svg#icon-Logo-5"
-                  ></use></svg
-              ></a>
+                  ></use></svg></a>
             </li>
           </ul>
         </div>
@@ -457,9 +450,7 @@
     <footer class="below">
       <div class="container footer-padding">
         <div>
-          <a class="below-logo" href="#"
-            ><span class="logo-blue">Web</span>Studio</a
-          >
+          <a class="below-logo" href="#"><span class="logo-blue">Web</span>Studio</a>
           <address>
             <ul class="below-link list">
               <li>
@@ -521,11 +512,104 @@
             </li>
           </ul>
         </div>
+         <form class="subscrabe-thumb">
+           <div class="subscrabe-input-thumb">
+           <label class="subscrabe-text" for="subscrabe">Подпишитесь на рассылку</label>
+           <input
+            class="subscrabe-input"
+            type="email"
+            name="subscrabe_email"
+            id="subscrabe"
+            placeholder="E-mail"/>
+           </div>
+           <div class="button-thumb">
+          <button class="subscrabe-button"> Подписаться 
+          <svg class="subscrabe-icon" width="24px" height="24px">
+          <use
+            xlink:href="./images/svg/symbol-defs-good.svg#icon-send"
+          ></use></svg>
+         </button>
+        </form>
+      </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close" data-modal-close>&#215;</button>
+        <form class="form-order" action="js-speaker-form">
+          
+          <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
+          <div class="form-field">
+           <label class="form-label" for="user-name"> Имя</label>
+          <svg class="form-icon" width="18px" height="18px">
+            <use
+             xlink:href="./images/svg/symbol-defs-good.svg#icon-vector_1"
+            ></use>
+          </svg>
+           <input
+            class="form-input"
+            type="text"
+            name="user-name"
+            id="user-name"/>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-phone"> Телефон</label>
+            <svg class="form-icon" width="18px" height="18px">
+                <use
+                  xlink:href="./images/svg/symbol-defs-good.svg#icon-vector_2"
+                ></use>
+              </svg>
+          <input
+            class="form-input"
+            type="tel"
+            name="user-tel"
+            id="user-phone"
+          />
+          </div>
+          <div class="form-field">
+          <label class="form-label" for="user-mail"> Почта</label>
+          <svg class="form-icon" width="18px" height="18px">
+                <use
+                  xlink:href="./images/svg/symbol-defs-good.svg#icon-vector_3"
+                ></use>
+              </svg>
+          <input class="form-input"
+          type="email" name="user-mail"" id="user-mail"
+          />
+          </div>
+          <div class="form-field">
+           <label class="form-label" for="user-text"> Комментарий</label>
+           <textarea 
+           class=" form-text"
+           name="user-mail" 
+           id="user-text" 
+           rows="10" 
+           placeholder="Введите текст"></textarea>
+          </div>
+          <div class="form-field " >
+           <label class="sheck_box_label" >
+               
+            <span>
+                 <svg class="sheck_box_icon" width="16px" height="15px">
+                <use
+                  xlink:href="./images/svg/symbol-defs-good.svg#icon-vector_4"></use>
+              </svg>
+            </span>
+            
+            <input class="checkbox" type="checkbox" name="privacy_policy" value="Соглашаюсь с рассылкой и принимаю Условия договора">
+               
+            <span class="">
+              <svg class="sheck_box_icon sheck_box_color " width="16px" height="15px">
+                <use
+                  xlink:href="./images/svg/symbol-defs-good.svg#icon-vector_5 "></use>
+              </svg>
+            </span>
+            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+           </label>
+          </div>
+          
+          <button class="button-form" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./modal.js"></script>
