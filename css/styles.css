@@ -763,6 +763,7 @@ img {
   color: var(--acent-color);
 }
 .form-header {
+  display: inline-block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.17;
@@ -771,24 +772,27 @@ img {
 
   margin-bottom: 12px;
 }
-.form-input:focus .form-icon {
-  color: #2196f3;
+
+.form-input:focus ~ .form-icon {
+  fill: var(--acent-color);
 }
-.form-input:focus .form-input {
-  border: 1px solid rgb(255, 0, 0);
+.form-input:focus,
+.form-text:focus {
+  border-color: var(--acent-color);
+  outline: none;
 }
 .form-field {
   display: flex;
   flex-direction: column;
-  margin: 10px 0 10px 0;
-  margin-bottom: 4px;
 
   position: relative;
 }
+
 .form-field-text {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+  margin-top: 10px;
   margin-bottom: 4px;
 }
 .form-text {
@@ -796,14 +800,19 @@ img {
   padding: 12px 16px;
 }
 .form-icon {
+  fill: var(--title-color);
   position: absolute;
   top: 50%;
   left: 15px;
+
+  transition: fill 250ms var(--animation);
 }
 .form-input {
   padding: 11px 0 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms var(--animation);
 }
 .sheck_box_label {
   position: relative;
@@ -828,6 +837,8 @@ img {
   height: 15px;
   margin-left: -23px;
   background-image: url(/images/svg/icon_dont_check.svg);
+
+  transition: background-image 250ms var(--animation);
 }
 /* вибране */
 .check_input:checked + .check_box {
