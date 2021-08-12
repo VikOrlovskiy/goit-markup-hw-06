@@ -451,6 +451,9 @@ img {
 .below {
   background-color: var(--footer-bgc);
 }
+.below-list {
+  display: flex;
+}
 .below-logo,
 .location {
   color: var(--title-white);
@@ -534,10 +537,8 @@ img {
 /* підпишись футер */
 .subscrabe-thumb {
   display: flex;
-  margin-left: auto;
-}
-.subscrabe-thumb:last-child {
   align-items: flex-end;
+  margin-left: 106px;
 }
 .subscrabe-input-thumb {
   display: flex;
@@ -552,6 +553,7 @@ img {
   text-transform: uppercase;
 }
 .subscrabe-input {
+  color: var(--title-white);
   background-color: var(--footer-bgc);
   font-size: 16px;
   line-height: 1.25;
@@ -730,9 +732,11 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
+  padding: 40px;
 
   min-width: 528px;
   min-height: 581px;
+  border-radius: 4px;
 
   background-color: var(--primary-bgc);
   transform: translate(-50%, -50%) scale(1);
@@ -741,14 +745,15 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.1);
 }
-.form-order {
-  padding: 40px;
+.form-field-position {
+  position: relative;
 }
 .close {
   color: var(--title-color);
   position: absolute;
   right: 0;
   top: 0;
+  padding: 5px;
   margin: 8px 8px;
   cursor: pointer;
 
@@ -758,9 +763,13 @@ img {
 
   transition: color 250ms var(--animation);
 }
-.close:hover,
-.close :focus {
-  color: var(--acent-color);
+.close_icon {
+  display: block;
+  fill: var(--title-color);
+}
+.close:hover .close_icon,
+.close :focus .close_icon {
+  fill: var(--acent-color);
 }
 .form-header {
   display: inline-block;
@@ -772,31 +781,32 @@ img {
 
   margin-bottom: 12px;
 }
-
+.form-input:hover ~ .form-icon,
 .form-input:focus ~ .form-icon {
   fill: var(--acent-color);
 }
 .form-input:focus,
-.form-text:focus {
+.form-text:focus,
+.form-input:hover,
+.form-text:hover {
   border-color: var(--acent-color);
   outline: none;
 }
 .form-field {
   display: flex;
   flex-direction: column;
-
-  position: relative;
+  margin-bottom: 10px;
 }
 
 .form-field-text {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  margin-top: 10px;
   margin-bottom: 4px;
 }
 .form-text {
   resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 16px;
 }
 .form-icon {
@@ -804,6 +814,7 @@ img {
   position: absolute;
   top: 50%;
   left: 15px;
+  transform: translateY(-50%);
 
   transition: fill 250ms var(--animation);
 }
@@ -812,6 +823,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
+  width: 100%;
   transition: border 250ms var(--animation);
 }
 .sheck_box_label {
@@ -819,7 +831,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   margin: 20px 0 30px 0;
-  padding-left: 45px;
+  padding-left: 42px;
 
   cursor: pointer;
 }
@@ -831,14 +843,11 @@ img {
 }
 .check_box {
   position: absolute;
-  top: 10%;
+  top: 12%;
   left: 10%;
   width: 16px;
   height: 15px;
-  margin-left: -23px;
-  background-image: url(/images/svg/icon_dont_check.svg);
-
-  transition: background-image 250ms var(--animation);
+  margin-left: -24px;
 }
 /* вибране */
 .check_input:checked + .check_box {
@@ -861,6 +870,7 @@ img {
 
   border-radius: 4px;
   border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background-color 250ms var(--animation),
     color 250ms var(--animation), border 250ms var(--animation);
