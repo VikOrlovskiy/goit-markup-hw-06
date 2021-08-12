@@ -794,6 +794,9 @@ img {
   border-color: var(--acent-color);
   outline: none;
 }
+.form-input:focus ~ .form-icon {
+  fill: var(--acent-color);
+}
 .form-field {
   display: flex;
   flex-direction: column;
