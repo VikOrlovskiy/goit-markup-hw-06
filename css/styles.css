@@ -854,7 +854,6 @@ img {
 }
 
 /* вибране */
-
 .check_input:checked + .icon-check {
   background-color: var(--acent-color);
 }
