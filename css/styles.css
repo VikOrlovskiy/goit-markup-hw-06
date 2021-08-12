@@ -856,7 +856,7 @@ img {
 
 /* вибране */
 .check_input:checked ~ .check_box {
-  background-image: url(/images/svg/icon_check.svg);
+  background-image: url(..//images/svg/icon_check.svg);
 }
 .button-form {
   background-color: var(--acent-color);
