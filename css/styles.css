@@ -769,8 +769,7 @@ img {
 }
 .sheck_box_icon {
   display: block;
-  fill: var(--title-color);
-  margin-right: 9px;
+  /* fill: var(--title-color); */
 }
 .close:hover .close_icon,
 .close :focus .close_icon {
@@ -786,7 +785,9 @@ img {
 
   margin-bottom: 12px;
 }
-
+.form-input:focus ~ .form-icon {
+  fill: var(--acent-color);
+}
 .form-input:focus,
 .form-text:focus,
 .form-input:hover,
@@ -794,16 +795,14 @@ img {
   border-color: var(--acent-color);
   outline: none;
 }
-.form-input:focus ~ .form-icon {
-  fill: var(--acent-color);
-}
+
 .form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-.sheck_box {
-  margin: 20px 0 30px 0;
+.sheck_box_form {
+  margin: 30px 0 20px 0;
 }
 .form-field-text {
   font-size: 12px;
@@ -854,12 +853,24 @@ img {
   display: block;
   width: 16px;
   height: 15px;
+  background-color: var(--primary-bgc);
+  border: 2px solid var(--title-color);
   margin-right: 7px;
+  border-radius: 4px;
+
+  transition: background-color 250ms var(--animation),
+    border 250ms var(--animation), background-image 250ms var(--animation);
 }
 
 /* вибране */
 .check_input:checked ~ .check_box {
+  background-size: contain;
+  background-origin: border-box;
+  background-color: var(--acent-color);
+  border: 1px solid var(--acent-color);
   background-image: url(..//images/svg/icon_check.svg);
+
+  transition: background-image 250ms var(--animation);
 }
 .button-form {
   background-color: var(--acent-color);
